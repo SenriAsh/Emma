@@ -1,3 +1,5 @@
+const BASE_URL = "https://Senri.pythonanywhere.com";
+
 // Obtener elementos del DOM
 const form = document.getElementById('registerForm');
 const name = document.getElementById('name');
@@ -47,7 +49,7 @@ form.addEventListener('submit', function (e) {
     password: password.value.trim()
   };
 
-  fetch('http://127.0.0.1:5000/register', {
+  fetch('${BASE_URL}/register', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(userData)

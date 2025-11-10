@@ -1,3 +1,5 @@
+const BASE_URL = "https://Senri.pythonanywhere.com";
+
 document.addEventListener('DOMContentLoaded', async () => {
   const nameInput = document.getElementById('name');
   const profilePic = document.getElementById('profilePic');
@@ -9,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Cargar datos del usuario
   try {
-    const res = await fetch('http://127.0.0.1:5000/current_user', { credentials: 'include' });
+    const res = await fetch('${BASE_URL}/current_user', { credentials: 'include' });
     const user = await res.json();
 
     if (user.name) nameInput.value = user.name;
@@ -33,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!confirm("¿Seguro que quieres borrar tu foto de perfil?")) return;
 
     try {
-      const res = await fetch('http://127.0.0.1:5000/delete_avatar', {
+      const res = await fetch('${BASE_URL}/delete_avatar', {
         method: 'POST',
         credentials: 'include'
       });
@@ -57,7 +59,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-      const res = await fetch('http://127.0.0.1:5000/update_profile', {
+      const res = await fetch('${BASE_URL}/update_profile', {
         method: 'POST',
         body: formData,
         credentials: 'include'
