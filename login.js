@@ -1,4 +1,4 @@
-const BASE_URL = "https://Senri.pythonanywhere.com";
+const BASE_URL = "https://senri.pythonanywhere.com";
 
 // Obtener elementos del formulario
 const form = document.querySelector('form');

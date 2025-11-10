@@ -1,4 +1,4 @@
-const BASE_URL = "https://Senri.pythonanywhere.com";
+const BASE_URL = "https://senri.pythonanywhere.com";
 
 // Obtener elementos del DOM
 const form = document.getElementById('registerForm');

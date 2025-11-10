@@ -1,4 +1,4 @@
-const BASE_URL = "https://Senri.pythonanywhere.com";
+const BASE_URL = "https://senri.pythonanywhere.com";
 
 // Función para comprobar si el usuario está logueado
 async function checkUser() {

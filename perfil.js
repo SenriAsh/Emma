@@ -1,4 +1,4 @@
-const BASE_URL = "https://Senri.pythonanywhere.com";
+const BASE_URL = "https://senri.pythonanywhere.com";
 
 document.addEventListener('DOMContentLoaded', async () => {
   const nameInput = document.getElementById('name');
