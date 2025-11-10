@@ -49,7 +49,7 @@ form.addEventListener('submit', function (e) {
     password: password.value.trim()
   };
 
-  fetch('${BASE_URL}/register', {
+  fetch(`${BASE_URL}/register`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(userData)

@@ -3,7 +3,7 @@ const BASE_URL = "https://Senri.pythonanywhere.com";
 // Función para comprobar si el usuario está logueado
 async function checkUser() {
   try {
-    const response = await fetch('${BASE_URL}/current_user', {
+    const response = await fetch(`${BASE_URL}/current_user`, {
       credentials: 'include' // necesario para enviar cookies de sesión
     });
 
@@ -34,7 +34,7 @@ async function checkUser() {
       const logoutBtn = document.getElementById('logoutBtn');
       logoutBtn.addEventListener('click', async () => {
         try {
-          await fetch('${BASE_URL}/logout', {
+          await fetch(`${BASE_URL}/logout`, {
             method: 'POST',
             credentials: 'include'
           });
